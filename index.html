@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .navbar-nav .nav-link {
+            font-size: 1rem;
+            margin-left: 15px;
+        }
+       
+        
+        #home {
+            text-align: center;
+            padding: 20px;
+        }
+
+        #home h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        #home p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        #home div a {
+            margin: 0 10px;
+            font-size: 24px;
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        #home div a:hover {
+            color: #007bff;
+        }
+
+        .appointment-btn {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .appointment-btn:hover {
+            background-color: #555;
+        }
+
+        @media (max-width: 768px) {
+            ul {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px;
+            }
+
+            ul li {
+                margin: 5px 0;
+            }
+
+            .t1 {
+                margin: 0 auto 10px;
+                text-align: center;
+            }
+
+            #home h1 {
+                font-size: 28px;
+            }
+
+            #home p {
+                font-size: 16px;
+            }
+
+            #home div a {
+                font-size: 20px;
+            }
+
+            .appointment-btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+        body {
+            margin: 0;
+            line-height: 1.6;
+        }
+        .about {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 50px 20px;
+            gap: 30px;
+        }
+        .about img {
+            flex: 1;
+            max-width: 500px;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .about div {
+            flex: 1;
+            max-width: 600px;
+            text-align: left;
+            padding: 20px;
+        }
+        .about1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .about p {
+            font-size: 1em;
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        @media (max-width: 768px) {
+            .about {
+                flex-direction: column;
+                text-align: center;
+            }
+            .about img {
+                max-width: 100%;
+            }
+            .about div {
+                text-align: center;
+                padding: 0;
+            }
+        }
+        .tattoo-services {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .tattoo-services h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #222;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .tattoo-services {
+            display: flex;
+            flex-direction: column;
+            gap: 40px; 
+            margin: 50px auto;
+            max-width: 1200px;
+            padding: 20px;
+        }
+        .service {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+        }
+        .service:last-child {
+            border-bottom: none; 
+        }
+        .service .content {
+            flex: 1;
+            padding: 10px;
+        }
+        .service .content .number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #F6A300; 
+            display: block;
+            margin-bottom: 10px;
+        }
+        .service .content h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .service .content p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+        }
+        .service .image-container {
+            position: relative;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .service .image-container img {
+            width: 100%;
+            max-width: 400px;
+            border: 5px solid #F6A300; 
+            border-radius: 10px;
+            transform: rotate(-3deg); 
+            transition: transform 0.3s ease;
+        }
+        .service .image-container img:hover {
+            transform: rotate(0deg); 
+        }
+        .service .arrow-button {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: #F6A300; 
+            color: white;
+            font-size: 1.5rem;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .service .arrow-button:hover {
+            background-color: #E69400; 
+        }
+        
+
+        /* General Styling */
+.contact-us {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    color: white;
+    border-radius: 10px;
+    margin: 40px 0;
+    position: relative;
+    background-image: url('./Tattoo\ \(about\ us\)\ img.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contact-us::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+}
+
+.contact-info, .contact-form {
+    position: relative;
+    z-index: 2;
+    width: 45%;
+}
+
+/* Contact Info Styling */
+.contact-info h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.info-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.info-list li {
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+    color: white;
+}
+
+/* Optional: Add some spacing between the label and the content */
+.info-list li strong {
+    margin-right: 10px;
+    
+}
+
+
+/* Contact Form Styling */
+.contact-form h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: #e74c3c;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #c0392b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-us {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .contact-info, .contact-form {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .footer-info, .footer-links, .footer-social {
+            width: 30%;
+        }
+        .footer h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            color: #e74c3c; /* Accent color */
+        }
+        .footer p {
+            font-size: 1em;
+            line-height: 1.6;
+        }
+        .footer-links ul, .footer-social ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-links ul li, .footer-social ul li {
+            margin-bottom: 10px;
+        }
+        .footer-links a, .footer-social a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+        .footer-links a:hover, .footer-social a:hover {
+            color: #e74c3c; /* Hover color */
+        }
+        .footer-bottom {
+            border-top: 1px solid #555;
+            padding-top: 10px;
+            font-size: 1em;
+            color: #bbb;
+        }
+        .footer-bottom p {
+            margin: 0;
+        }
+        .gallery {
+            padding: 40px;
+            text-align: center;
+            
+            color: white;
+        }
+        .gallery h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #e74c3c;
+            text-transform: uppercase;
+        }
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .gallery-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .gallery-container img:hover {
+            transform: scale(1.1);
+        }
+        .additional-images {
+            display: none;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .read-more-link {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #e74c3c;
+            color: white;
+            padding: 12px 25px;
+            font-size: 1.1em;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        .read-more-link:hover {
+            background-color: #c0392b;
+        }
+
+
+
+
+
+
+
+
+
+       
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Jarvis Tattoos</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contacts</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="home">
+        <h1>Jarvis Tattoos - Professional Tattoo Studio in Madurai</h1>
+        <p>Your one-stop destination for artistic and creative tattoos.</p>
+        <p>
+            Our studio proudly offers services by both male and female professional tattoo artists, each with over 5 years of experience in the industry.
+        </p>
+        <p>
+            Located in the heart of Madurai, Tamil Nadu, we bring your tattoo ideas to life with creativity and precision.
+        </p>
+        <div>
+            <a href="tel:+919876543210" aria-label="Call Us">
+                <i class="fa-solid fa-phone"></i>
+            </a>
+            <a href="mailto:info@jarvistattoos.com" aria-label="Email Us">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="https://facebook.com/jarvistattoos" target="_blank" rel="noopener" aria-label="Facebook">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://instagram.com/jarvistattoos" target="_blank" rel="noopener" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
+        <button class="appointment-btn" > Book an Appointment</button>
+    </section>
+
+    <section id="about" class="about">
+        <img src="./Tattoo (about us) img.jpg" alt="Jarvis Tattoos team">
+        <div>
+            <h2 class="about1">About Us</h2>
+            <p>At Jarvis Tattoos, we have a team of professional artists who specialize in bringing your tattoo ideas to life.</p>
+            <p>With years of experience and a passion for art, we ensure each design is unique and meaningful.</p>
+            <p>Our artists are dedicated to maintaining the highest standards of hygiene and safety for your comfort and peace of mind.</p>
+            <p>Whether it's your first tattoo or you're adding to your collection, we’re here to make your vision a reality.</p>
+        </div>
+    </section>
+    <section class="tattoo-services" id="service">
+        <h2>Our Services</h2>
+        <!-- Customized Tattoos -->
+        <div class="service">
+            <div class="content">
+                <span class="number">01</span>
+                <h2>Customized Tattoos</h2>
+                <p>
+                    If you want a custom tattoo designed, the thought of finding the perfect designer to create it can be intimidating. 
+                    We are one of the leading Custom Tattoo makers in Coimbatore. Our Tattoo Artists in the Studio come up with different 
+                    genres of tattoo designs, especially when our clients need their own customized tattoo for men and women both. 
+                    We have unlimited tattoo ideas in permanent as well as temporary designs at the most reasonable cost.
+                </p>
+            </div>
+            <div class="image-container">
+                <img src="./customized-tattoo.jpg" alt="Customized Tattoo Design">
+                
+            </div>
+        </div>
+    
+        <!-- Cover-Up Tattoos -->
+        <div class="service">
+            <div class="content">
+                <span class="number">02</span>
+                <h2>Cover-Up Tattoos</h2>
+                <p>
+                    Transform old or unwanted tattoos into stunning new designs. Our expert artists specialize in cover-ups, ensuring that 
+                    the new tattoo fully conceals the old one with creative and detailed artwork.
+                </p>
+            </div>
+            <div class="image-container">
+                <img src="./coverup-tattoos.jpg" alt="Cover-Up Tattoo Design">
+                
+            </div>
+        </div>
+    
+        <!-- Portrait Tattoos -->
+        <div class="service">
+            <div class="content">
+                <span class="number">03</span>
+                <h2>Portrait Tattoos</h2>
+                <p>
+                    Get a lifelike portrait tattoo to commemorate your loved ones or idols. Our skilled artists excel in realistic tattooing, 
+                    capturing every detail to create a meaningful masterpiece.
+                </p>
+            </div>
+            <div class="image-container">
+                <img src="./customized-tattoo-1.jpg" alt="Portrait Tattoo Design">
+                
+            </div>
+        </div>
+    
+        <!-- Scar Cover-Up Tattoos -->
+        <div class="service">
+            <div class="content">
+                <span class="number">04</span>
+                <h2>Scar Cover-Up Tattoos</h2>
+                <p>
+                    Turn scars into stunning pieces of art. Our artists are experienced in designing tattoos that not only conceal scars but 
+                    also enhance your skin with beautiful and meaningful designs.
+                </p>
+            </div>
+            <div class="image-container">
+                <img src="./scar-coverup-tattoos.jpg" alt="Scar Cover-Up Tattoo Design">
+                
+            </div>
+        </div>
+    
+        <!-- Redefined Tattoos -->
+        <div class="service">
+            <div class="content">
+                <span class="number">05</span>
+                <h2>Redefined Tattoos</h2>
+                <p>
+                    Refresh faded or outdated tattoos with our redefined tattoo services. We breathe new life into your old tattoos by 
+                    enhancing their colors, lines, and details.
+                </p>
+            </div>
+            <div class="image-container">
+                <img src="./redefined-tattoos.jpg" alt="Redefined Tattoo Design">
+                
+            </div>
+        </div>
+    
+        <!-- Couple Tattoos -->
+        <div class="service">
+            <div class="content">
+                <span class="number">06</span>
+                <h2>Couple Tattoos</h2>
+                <p>
+                    Celebrate your love with matching or complementary tattoos for couples. Our artists work with you to create designs 
+                    that symbolize your unique bond and story.
+                </p>
+            </div>
+            <div class="image-container">
+                <img src="./couples-tattoos.jpg" alt="Couple Tattoo Design">
+               
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-container">
+            <img src="./g6.jpg" alt="Tattoo 1">
+            <img src="./g2.jpg" alt="Tattoo 2">
+            <img src="./g3.jpg" alt="Tattoo 3">
+            <img src="./g5.jpg" alt="Tattoo 4">
+            
+        </div>
+        <a href="D:\intenship\project\gallery.html" class="read-more-link">Read More</a>
+    </section>
+    
+    
+    
+
+    <section class="contact-us" id="contact">
+        <div class="contact-info">
+            <h2>Get In Touch</h2>
+            
+            
+            <ul class="info-list">
+                <li><strong>Address:</strong> 456 Ink Avenue, Tattoo City, Country</li>
+                <li><strong>Email:</strong> contact@tattooshop.com</li>
+                <li><strong>Phone:</strong> +123 987 6543</li>
+                
+                <li><strong>Hours:</strong> Mon - Fri, 12:00 PM - 8:00 PM</li>
+            </ul>
+        </div>
+    
+        <div class="contact-form">
+            <h2>Book an Appointment</h2>
+            <form action="#" method="POST">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your name">
+    
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+    
+                <label for="phone">Your Phone Number</label> 
+                <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+    
+                <label for="message">Your Message or Tattoo Idea</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+    
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>About Us</h3>
+                <p>At Jarvis Tattoos, we have a team of professional artists who specialize in bringing your tattoo ideas to life.</p>
+            </div>
+    
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                    <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2025 Jarvis Tattoos. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
