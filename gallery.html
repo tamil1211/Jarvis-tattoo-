@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gallery {
+            text-align: center;
+            padding: 20px;
+        }
+        .gallery h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 columns */
+            gap: 15px; /* Space between images */
+            padding: 0 10px;
+
+        }
+        .gallery-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .gallery-container img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <section id="gallery" class="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-container">
+            <img src="./" alt="Tattoo 1">
+            <img src="" alt="Tattoo 2">
+            <img src="./img2.jpg" alt="Tattoo 3">
+            <img src="img2.jpg" alt="Tattoo 4">
+            <img src="img2.jpg" alt="Tattoo 5">
+            <img src="img2.jpg" alt="Tattoo 6">
+            <img src="img2.jpg" alt="Tattoo 7">
+            <img src="img2.jpg" alt="Tattoo 8">
+            <img src="img2.jpg" alt="Tattoo 9">
+            <img src="img2.jpg" alt="Tattoo 10">
+            <img src="img2.jpg" alt="Tattoo 11">
+            <img src="img2.jpg" alt="Tattoo 12">
+        </div>
+    </section>
+</body>
+</html>
